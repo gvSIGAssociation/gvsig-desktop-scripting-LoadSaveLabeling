@@ -5,7 +5,11 @@ from gvsig.libs.formpanel import getResource
 
 from java.io import File
 from org.gvsig.tools import ToolsLocator
-from addons.loadsaveLabeling.actions import selfRegister
+
+import addons.loadsavelabeling.actions
+reload(addons.loadsavelabeling.actions)
+
+from addons.loadsavelabeling.actions import selfRegister
 
 def main(*args):
 

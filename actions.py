@@ -17,14 +17,15 @@ from java.io import FileOutputStream
 from java.io import FileInputStream
 
 def trace(msg):
-  print "###> ", msg
+  #print "###> ", msg
+  pass
 
 class SaveLabelingAction(AbstractAction):
 
   def __init__(self):
     AbstractAction.__init__(self,"Save labeling")
     self.putValue(Action.ACTION_COMMAND_KEY, "SaveLabeling")
-    self.putValue(Action.SMALL_ICON, load_icon(getResource(__file__,"saveLabeling.png")))
+    self.putValue(Action.SMALL_ICON, load_icon(getResource(__file__,"images","saveLabeling.png")))
     self.putValue(Action.SHORT_DESCRIPTION, "Save labeling to a file")
 
   def actionPerformed(self,e=None):
@@ -67,7 +68,7 @@ class LoadLabelingAction(AbstractAction):
   def __init__(self):
     AbstractAction.__init__(self,"Load labeling")
     self.putValue(Action.ACTION_COMMAND_KEY, "LoadLabeling")
-    self.putValue(Action.SMALL_ICON, load_icon(getResource(__file__,"loadLabeling.png")))
+    self.putValue(Action.SMALL_ICON, load_icon(getResource(__file__,"images","loadLabeling.png")))
     self.putValue(Action.SHORT_DESCRIPTION, "Load labeling from a file")
 
   def actionPerformed(self,e=None):
@@ -105,9 +106,9 @@ class LoadLabelingAction(AbstractAction):
 
 def selfRegister():
   cfgActionsManager = ToolsUtilLocator.getConfigurableActionsMamager()
-  cfgActionsManager.addConfigurableAction("labelingPropertiesPage",SaveLabelingAction())
   cfgActionsManager.addConfigurableAction("labelingPropertiesPage",LoadLabelingAction())
+  cfgActionsManager.addConfigurableAction("labelingPropertiesPage",SaveLabelingAction())
   
 def main(*args):
-  pass
+  selfRegister()
   
