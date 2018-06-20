@@ -1,0 +1,22 @@
+#
+#Tue Jun 19 17:58:08 CEST 2018
+owner=gvSIG association
+code=loadsavelabeling
+java-version=j1_7
+official=true
+type=Script
+version=1.0.0-1
+state=testing
+operating-system=all
+dependencies=
+sources-url=
+web-url=
+architecture=all
+model-version=1.0.1
+categories=Formats
+description=Permite guardar y recuperar el etiquetado de una capa.
+owner-url=
+buildNumber=1
+download-url=https\://github.com/gvSIGAssociation/gvsig-desktop-scripting-sigpacxml2csv/releases/download/1.0.0-4/gvSIG-desktop-2.4.0-sigpacxml2csv-1.0.0-4-testing-all-all-j1_7.gvspkg
+gvSIG-version=2.4.0
+name=Tools\: Load and save labeling
